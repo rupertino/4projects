@@ -6,12 +6,12 @@ namespace Unit01
     {
         public override string GetSummary()
         {
-            double distanc = distance();
+            double distanc = GetDistance();
             double speed = Speed();
             double pace = Pace();
-            DateTime date = Date();
-            string typeActivity = TypeActivity();
-            int during = duringTime();
+            DateTime date = GetDate();
+            string typeActivity = GetTypeActivity();
+            int during = GetDuration();
             Console.WriteLine($"{date} {typeActivity} ({during} min) Distance: {distanc} Speed: {speed} kph Pace: {pace} min per km");
             return "";
         }

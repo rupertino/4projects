@@ -6,36 +6,29 @@ namespace Unit01
     {
         static void Main(string[] args)
         {
-
             Runnig runnig = new Runnig();
-            runnig.Distance(4.8);
-            runnig.DuringTime(30);
-            runnig.Date(DateTime.Now);
-            runnig.TypeActivity("Running");
+            runnig.SetDistance(4.8);
+            runnig.SetDuration(30);
+            runnig.SetDate(DateTime.Now);
+            runnig.SetTypeActivity("Running");
             runnig.GetSummary();
 
-
             cycling cycling = new cycling();
-            cycling.Distance(100);
-            cycling.DuringTime(30);
-            cycling.Date(DateTime.Now);
-            cycling.TypeActivity("Cycling");
+            cycling.SetDistance(100);
+            cycling.SetDuration(30);
+            cycling.SetDate(DateTime.Now);
+            cycling.SetTypeActivity("Cycling");
             cycling.GetSummary();
 
             Swimming swimming = new Swimming();
             swimming.Laps(1000);
-            swimming.Distance(10);
-            swimming.DuringTime(60);
-            swimming.Date(DateTime.Now);
-            swimming.TypeActivity("Swimming");
+            swimming.SetDistance(10);
+            swimming.SetDuration(60);
+            swimming.SetDate(DateTime.Now);
+            swimming.SetTypeActivity("Swimming");
             swimming.GetSummary();
 
-
-            Console.ReadLine();
-            
-
-
-
+            Console.ReadLine();            
         }
     }
 }
