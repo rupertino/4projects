@@ -4,14 +4,22 @@ namespace Unit02
     {
         private string _register;
 
-        public void Register(string resgister ) { _register = resgister; }
-
-        public string fullDetailsRegister()
+        public string GetRegister()
         {
-            string result = standarDetails();
-            string combine = $"{result} Email Register: {_register}";
-            return combine;
+            return _register;
         }
 
+        public void SetRegister(string newRegister)
+        {
+            _register = newRegister;
+        }    
+
+        public string GetFullDetails()
+        {
+            string result = "Full Details \r\n" 
+            + GetStandarDetails();
+            string combine = $"{result}Email Register: {GetRegister()}";
+            return combine;
+        }
     }
 }

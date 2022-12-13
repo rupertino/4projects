@@ -7,62 +7,45 @@ namespace Unit02
         static void Main(string[] args)
         {
             Lectures lectures = new Lectures();
-            lectures.Title("Reader");
-            lectures.Description("Test");
-            DateTime date = new DateTime(2003,01,07);
-            lectures.Date(date);
-            TimeSpan hours = new TimeSpan(6,0,0);
-            lectures.Hours(hours);
-            lectures.TypeEvent("Lectures");
-            lectures.Speaker("Carlos");
-            lectures.Limit(2);
+            lectures.SetTypeEvent("Lecture");
+            lectures.SetTitle("12 Rules of Life");
+            lectures.SetDescription("Analysis of the chapter 1 of the book.");
+            lectures.SetDate("December 18, 2022");
+            lectures.SetHours("7:00pm");
+            lectures.SetSpeaker("Carlos Gonzalez");
+            lectures.SetLimit(15);
 
-            Console.WriteLine("Lecture");
-            string standarDetailLecture = lectures.standarDetails();
-            Console.WriteLine(standarDetailLecture);
-            string fullDetails = lectures.fullDetailsLectures();
-            Console.WriteLine(fullDetails);
-            string shortDetail = lectures.ShortDetail();
-            Console.WriteLine(shortDetail);
+            Console.WriteLine("Standar Details");
+            Console.WriteLine(lectures.GetStandarDetails());
+            Console.WriteLine(lectures.GetFullDetails());
+            Console.WriteLine(lectures.GetShortDetails());
 
             Receptions receptions = new Receptions();
+            receptions.SetTypeEvent("Reception");
+            receptions.SetTitle("Victoria and Leos Wedding");
+            receptions.SetDescription("We are happy to share with you this moment of joy in our lives.");
+            receptions.SetDate("January 1, 2023");
+            receptions.SetHours("5:00pm");
+            receptions.SetRegister("veronica@test.com");
 
-            receptions.Title("Reception");
-            receptions.Description("Test");
-            DateTime receptionsdate = new DateTime(2003, 01, 07);
-            receptions.Date(receptionsdate);
-            TimeSpan receptionshours = new TimeSpan(6, 0, 0);
-            receptions.Hours(receptionshours);
-            receptions.TypeEvent("Reception");
-            receptions.Register("testqtest@test.com");
+            Console.WriteLine("Standar Details");
+            Console.WriteLine(receptions.GetStandarDetails());
+            Console.WriteLine(receptions.GetFullDetails());
+            Console.WriteLine(receptions.GetShortDetails());
 
-            Console.WriteLine("Reception");
-            string standarDetailReception = receptions.standarDetails();
-            Console.WriteLine(standarDetailReception);
-            string fullDetailsreceptions = receptions.fullDetailsRegister();
-            Console.WriteLine(fullDetailsreceptions);
-            string shortDetailreceptions = receptions.ShortDetail();
-            Console.WriteLine(shortDetailreceptions);
+            OutDoor outdoor = new OutDoor();
+            outdoor.SetTypeEvent("Outdoor");
+            outdoor.SetTitle("Trail walk in Colorado Hill");
+            outdoor.SetDescription("Come and enjoy the nature in this beatuful spot.");
+            outdoor.SetDate("February 10, 2023");
+            outdoor.SetHours("8:00am");
+            outdoor.SetWeather("Sunny");
 
-            OutDoor door = new OutDoor();
-
-            door.Title("OutDoor");
-            door.Description("Test");
-            DateTime doordate = new DateTime(2003, 01, 07);
-            door.Date(doordate);
-            TimeSpan doorhours = new TimeSpan(6, 0, 0);
-            door.Hours(doorhours);
-            door.TypeEvent("OutDoor");
-            door.Weather("Sunny");
-
-            Console.WriteLine("OutDoor");
-            string standarDetaildoor = door.standarDetails();
-            Console.WriteLine(standarDetaildoor);
-            string fullDetailsdoor = door.fullDetailsWeather();
-            Console.WriteLine(fullDetailsdoor);
-            string shortDetaildoor = door.ShortDetail();
-            Console.WriteLine(shortDetailreceptions);
-
+            Console.WriteLine("Standar Details");
+            Console.WriteLine(outdoor.GetStandarDetails());
+            Console.WriteLine(outdoor.GetFullDetails());
+            Console.WriteLine(outdoor.GetShortDetails());
+            
             Console.ReadLine();
         }       
     }

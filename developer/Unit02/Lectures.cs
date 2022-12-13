@@ -5,14 +5,31 @@ namespace Unit02
         private string _speaker;
         private int _limit;
 
-        public void Speaker(string speaker) { _speaker = speaker; }
-        public void Limit(int limit) { _limit = limit; }
-
-        public string fullDetailsLectures() 
+        public string GetSpeaker()
         {
-            string result = standarDetails();
+            return _speaker;
+        }
+        public int GetLimit()
+        {
+            return _limit;
+        }
 
-            string combine = $"{result} Speaker: {_speaker} Limit: {_limit}";
+        public void SetSpeaker(string newSpeaker)
+        {
+            _speaker = newSpeaker;
+        }
+
+        public void SetLimit(int newLimit)
+        {
+            _limit = newLimit;
+        }
+        
+        public string GetFullDetails() 
+        {
+            string result = "Full Details \r\n" 
+            + GetStandarDetails();
+
+            string combine = $"{result}Speaker: {_speaker} Limit: {_limit}";
             return combine;
         }
     }

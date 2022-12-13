@@ -4,12 +4,20 @@ namespace Unit02
     {
         private string _weather;
 
-        public void Weather(string weather) { _weather = weather; }
-
-        public string fullDetailsWeather()
+        public string GetWeather()
         {
-            string result = standarDetails();
-            string combine = $"{result} Weather: {_weather}";
+            return _weather;
+        }
+        public void SetWeather(string newWeather)
+        {
+            _weather = newWeather;
+        }
+        
+        public string GetFullDetails()
+        {
+            string fullDetails = "Full Details\r\n";    
+            string result = GetStandarDetails();
+            string combine = $"{fullDetails}{result}Weather: {_weather}";
             return combine;
         }
     }
